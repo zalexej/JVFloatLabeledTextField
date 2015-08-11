@@ -133,7 +133,7 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
     void (^showBlock)(void) = ^{
         self->_floatingLabel.alpha = 1.0f;
         self->_floatingLabel.frame = CGRectMake(self->_floatingLabel.frame.origin.x,
-                                          self->_floatingLabelYPadding,
+                                          self->_floatingTitleAtTheTop ? (-self->_floatingLabelYPadding - CGRectGetHeight(self->_floatingLabel.frame)) : self->_floatingLabelYPadding,
                                           self->_floatingLabel.frame.size.width,
                                           self->_floatingLabel.frame.size.height);
     };
@@ -276,18 +276,22 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
 - (CGRect)textRectForBounds:(CGRect)bounds
 {
     CGRect rect = [super textRectForBounds:bounds];
-    if ([self.text length] || self.keepBaseline) {
-        rect = [self insetRectForBounds:rect];
-    }
+	if (!self.floatingTitleAtTheTop) {
+		if ([self.text length] || self.keepBaseline) {
+			rect = [self insetRectForBounds:rect];
+		}
+	}
     return CGRectIntegral(rect);
 }
 
 - (CGRect)editingRectForBounds:(CGRect)bounds
 {
     CGRect rect = [super editingRectForBounds:bounds];
-    if ([self.text length] || self.keepBaseline) {
-        rect = [self insetRectForBounds:rect];
-    }
+	if (!self.floatingTitleAtTheTop) {
+		if ([self.text length] || self.keepBaseline) {
+			rect = [self insetRectForBounds:rect];
+		}
+	}
     return CGRectIntegral(rect);
 }
 
@@ -301,15 +305,17 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
 - (CGRect)clearButtonRectForBounds:(CGRect)bounds
 {
     CGRect rect = [super clearButtonRectForBounds:bounds];
-    if (0 != self.adjustsClearButtonRect
-    	&& _floatingLabel.text.length // for when there is no floating title label text
-	) {
-        if ([self.text length] || self.keepBaseline) {
-            CGFloat topInset = ceilf(_floatingLabel.font.lineHeight + _placeholderYPadding);
-            topInset = MIN(topInset, [self maxTopInset]);
-            rect = CGRectMake(rect.origin.x, rect.origin.y + topInset / 2.0f, rect.size.width, rect.size.height);
-        }
-    }
+	if (!self.floatingTitleAtTheTop) {
+		if (0 != self.adjustsClearButtonRect
+			&& _floatingLabel.text.length // for when there is no floating title label text
+		) {
+			if ([self.text length] || self.keepBaseline) {
+				CGFloat topInset = ceilf(_floatingLabel.font.lineHeight + _placeholderYPadding);
+				topInset = MIN(topInset, [self maxTopInset]);
+				rect = CGRectMake(rect.origin.x, rect.origin.y + topInset / 2.0f, rect.size.width, rect.size.height);
+			}
+		}
+	}
     return CGRectIntegral(rect);
 }
 
