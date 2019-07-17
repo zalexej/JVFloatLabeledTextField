@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4306C37419531E7000CC0A4C /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 4306C37319531E7000CC0A4C /* NSString+TextDirectionality.m */; };
 		639EABFA1B0B5F79001DD7B5 /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FF4DB92180B865F008527BD /* JVFloatLabeledTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		639EABFB1B0B5F79001DD7B5 /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F9AB495183B2EBF00694AB0 /* JVFloatLabeledTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		639EABFC1B0B5F79001DD7B5 /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = 4306C37219531E7000CC0A4C /* NSString+TextDirectionality.h */; };
 		639EABFD1B0B5F83001DD7B5 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FF4DB93180B865F008527BD /* JVFloatLabeledTextField.m */; };
 		639EABFE1B0B5F83001DD7B5 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9AB496183B2EBF00694AB0 /* JVFloatLabeledTextView.m */; };
-		639EABFF1B0B5F83001DD7B5 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 4306C37319531E7000CC0A4C /* NSString+TextDirectionality.m */; };
 		639EAC011B0B6013001DD7B5 /* JVFloatLabeledText.h in Headers */ = {isa = PBXBuildFile; fileRef = 639EABF41B0B5EC6001DD7B5 /* JVFloatLabeledText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F394935199DE5E10069C867 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F394934199DE5E10069C867 /* XCTest.framework */; };
 		7F394936199DE5E10069C867 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F50335917FA7B0A0026FB7F /* Foundation.framework */; };
@@ -59,8 +56,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4306C37219531E7000CC0A4C /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextDirectionality.h"; sourceTree = "<group>"; };
-		4306C37319531E7000CC0A4C /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
 		639EABD51B0B5E6F001DD7B5 /* JVFloatLabeledText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVFloatLabeledText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639EABF41B0B5EC6001DD7B5 /* JVFloatLabeledText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledText.h; sourceTree = "<group>"; };
 		639EABF51B0B5EC6001DD7B5 /* JVFloatLabeledText-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "JVFloatLabeledText-Info.plist"; sourceTree = "<group>"; };
@@ -225,8 +220,6 @@
 				7FF4DB93180B865F008527BD /* JVFloatLabeledTextField.m */,
 				7F9AB495183B2EBF00694AB0 /* JVFloatLabeledTextView.h */,
 				7F9AB496183B2EBF00694AB0 /* JVFloatLabeledTextView.m */,
-				4306C37219531E7000CC0A4C /* NSString+TextDirectionality.h */,
-				4306C37319531E7000CC0A4C /* NSString+TextDirectionality.m */,
 			);
 			path = JVFloatLabeledTextField;
 			sourceTree = "<group>";
@@ -241,7 +234,6 @@
 				639EAC011B0B6013001DD7B5 /* JVFloatLabeledText.h in Headers */,
 				639EABFA1B0B5F79001DD7B5 /* JVFloatLabeledTextField.h in Headers */,
 				639EABFB1B0B5F79001DD7B5 /* JVFloatLabeledTextView.h in Headers */,
-				639EABFC1B0B5F79001DD7B5 /* NSString+TextDirectionality.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +317,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				ar,
 			);
@@ -376,7 +369,6 @@
 			files = (
 				639EABFD1B0B5F83001DD7B5 /* JVFloatLabeledTextField.m in Sources */,
 				639EABFE1B0B5F83001DD7B5 /* JVFloatLabeledTextView.m in Sources */,
-				639EABFF1B0B5F83001DD7B5 /* NSString+TextDirectionality.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +387,6 @@
 			files = (
 				7FF4DB94180B865F008527BD /* JVFloatLabeledTextField.m in Sources */,
 				7F50338E17FA7B8C0026FB7F /* JVFloatLabeledTextFieldViewController.m in Sources */,
-				4306C37419531E7000CC0A4C /* NSString+TextDirectionality.m in Sources */,
 				7F50336A17FA7B0A0026FB7F /* JVAppDelegate.m in Sources */,
 				7F50336617FA7B0A0026FB7F /* main.m in Sources */,
 				7FE3F0E41CB0598B00202683 /* JVFloatLabeledTextFieldXIBViewController.m in Sources */,
