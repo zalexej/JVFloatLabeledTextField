@@ -123,12 +123,6 @@ IB_DESIGNABLE
 @property (nonatomic, assign) IBInspectable BOOL keepBaseline;
 
 /**
- * Indicates that label will be animated outside to the top of text label rect.
- * Defaults to NO
- */
-@property (assign) BOOL floatingTitleAtTheTop;
-
-/**
  * Force floating label to be always visible
  * Defaults to NO
  */
